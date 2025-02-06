@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ES6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -18,10 +22,21 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", // Add this to specify the base directory for relative paths
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"],  // Ensure this matches your actual structure
+      "@/models/*": ["./models/*"],
+      "@/lib/*": ["./lib/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "components/**/*.ts", // Ensure this path matches where you store globals.d.ts
+    "lib/**/*.ts",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
