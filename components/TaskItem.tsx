@@ -12,7 +12,7 @@ interface Task {
 
 export default function TaskItem({ task, onUpdate, onDelete }: { task: Task; onUpdate: () => void; onDelete: () => void }) {
   return (
-    <div className="p-4 border rounded mb-2 flex justify-between items-center">
+    <div className="p-4 border rounded mb-2 flex justify-between items-center bg-white text-black shadow-md">
       <div>
         <h3 className={`font-bold ${task.completed ? "line-through" : ""}`}>{task.title}</h3>
         <p>{task.description}</p>
@@ -27,3 +27,4 @@ export default function TaskItem({ task, onUpdate, onDelete }: { task: Task; onU
     </div>
   );
 }
+

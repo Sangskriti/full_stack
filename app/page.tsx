@@ -86,8 +86,7 @@ export default function Home() {
 
   return (
     <main className="max-w-2xl mx-auto p-5">
-      <h1 className="text-2xl font-bold mb-4">Task Manager</h1>
-
+      <h1 className="text-2xl font-bold mb-4 text-white text-center">Task Manager</h1>
       <form onSubmit={handleAddTask} className="mb-4">
         <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" required className="border p-2 w-full mb-2" />
         <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" className="border p-2 w-full mb-2" />
