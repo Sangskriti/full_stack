@@ -22,11 +22,10 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".", // Add this to specify the base directory for relative paths
+    "baseUrl": "./", // Add this to specify the base directory for relative paths
     "paths": {
-      "@/*": ["./src/*"],  // Ensure this matches your actual structure
-      "@/models/*": ["./models/*"],
-      "@/lib/*": ["./lib/*"]
+      "@/*": ["./*"],  // Ensure this matches your actual structure
+      
     }
   },
   "include": [
